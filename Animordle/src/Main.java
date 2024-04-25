@@ -7,11 +7,11 @@ public class Main extends JFrame{
 	private static final int HEIGHT=600;
 	
 	public Main () {
-		super("Animordle");
+		super("2 Player Pong");
 		setSize(WIDTH, HEIGHT);
 		Game play = new Game();
 		((Component) play).setFocusable(true);
-		setBackground(Color.pink);
+		setBackground(Color.black);
 		getContentPane().add(play);
 		
 		setVisible(true);
