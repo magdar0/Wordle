@@ -1,8 +1,8 @@
 
-public class Words {
+public class Alligators {
 	private String[] wordList;
 	private String answer, displayWord;
-	public Words() {
+	public Alligators() {
 		wordList = new String[20];
 		wordList[0]="dolphin";
 		wordList[1]="cheetah";
