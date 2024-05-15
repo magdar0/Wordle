@@ -1,82 +1,96 @@
+
 import javax.swing.*;
+
 import java.awt.*;
 
-public class Paddle {
+public class Alligators {
+
 	private int x;
 	private int y;
 	private int width;
 	private int height;
-	private int dx;
 	private int dy;
 	private Color c;
 	private int score;
 
-public Paddle() {
-	x=200;
-	y=200;
-	width=30;
-	height=30;
-	dy=0;
-	c=Color.magenta;
-	score=0;
-}
+	public Alligators() {
+		score = 0;
+		x = 300;
+		y = 300;
+		width = 30;
+		height = 30;
 
-public Paddle(int x1, int y1, int w, int h, Color c1) {
-	x=x1;
-	y=y1;
-	score=0;
-	dy=0;
-	width=w;
-	height=h;
-	c=Color.magenta;
-}
+		dy = 0;
 
-public int getX() {
-	return x;
-}
+		c = Color.cyan;
 
-public int getY() {
-	return y;
-}
+	}
 
-public int getW() {
-	return width;
-}
+	public Alligators(int x1, int y1, int w, int h, Color c1) {
+		x = x1;
+		y = y1;
+		score = 0;
+		dy = 0;
+		width = w;
+		height = h;
 
-public int getH() {
-	return height;
-}
+		c = Color.cyan;
 
-public void setH(int e) {
-	height = e;
-}
+	}
 
-public void setdy(int e) {
-	dy=e;
-}
+	public int getX() {
+		return x;
+	}
 
-public Color getC() {
-	return c;
-}
+	public int getY() {
+		return y;
+	}
 
-public void setC(Color e) {
-	c=e;
-}
+	public int getWidth() {
+		return width;
+	}
 
-public int getScore() {
-	return score;
-}
+	public int getHeight() {
+		return height;
+	}
 
-public void setScore(int f) {
-	score+=f;
-}
+	public void setHeight(int height) {
+		this.height = height;
+	}
 
-public void move() {
-	y+=dy;
-	if(y+height>560)
-		y=560-height;
-	
-	if(y<0)
-		y=0;
-}
+	public int getDy() {
+		return dy;
+	}
+
+	public void setDy(int dy) {
+		this.dy = dy;
+	}
+
+	public Color getC() {
+		return c;
+	}
+
+	public void setC(Color c) {
+		this.c = c;
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int s) {
+		score += s;
+	}
+
+	public void move() {
+
+		y += dy;
+		if (y + width > 600)
+			y = 600 - width;
+	}
+
+	public static boolean Collision(Alligators p) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }
