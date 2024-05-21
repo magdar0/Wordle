@@ -16,11 +16,13 @@ public class Game extends JPanel implements Runnable, KeyListener {
 	private double time;
 	private double curtime;
 	private Fish fish;
+	private ImageIcon background;
 
 	public Game() {
-		back = null;
+	
 		new Thread(this).start();
 		this.addKeyListener(this);
+        background = new ImageIcon("lake.jpg");
 		p = new Alligators(0, 0, 50, 200, Color.magenta);
 		fish = new Fish(300, 0, 100, 100, 3, 1, Color.black);
 		Sound p = new Sound();
